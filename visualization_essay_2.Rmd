@@ -1,11 +1,14 @@
 ---
-title: "Digitally Detecting Agency"
-author: "Joshua Catalano"
+title: 
+author:
 output:
   html_document: default
   html_notebook: default
 ---
 
+<center><h1>  Digitally Detecting Agency </h1>
+<h3> Joshua Catalano </h3>
+</center>
 
 ```{r libraries, include=FALSE, message=FALSE}
 library(rvest)
@@ -251,52 +254,61 @@ map_data <- map_data %>%
 
 #creating a new data table to include all treaties. Need to make  data tables match to bind. 
 
-map_data_2 <- map_data
+#map_data_2 <- map_data
 
-geo_code_decade_2 <- geo_code_decade
+#geo_code_decade_2 <- geo_code_decade
 
-names(geo_code_decade_2)[names(geo_code_decade_2)=="treaty_id"] <- "treaty_a"
-names(geo_code_decade_2)[names(geo_code_decade_2)=="decade_full"] <- "borrowing_decade_char"
-names(geo_code_decade_2)[names(geo_code_decade_2)=="nations"] <- "nations_a"
-names(geo_code_decade_2)[names(geo_code_decade_2)=="us_agents"] <- "us_agents_a"
-names(geo_code_decade_2)[names(geo_code_decade_2)=="latitude_negotiated"] <- "latitude_negotiated_a"
-names(geo_code_decade_2)[names(geo_code_decade_2)=="longitude_negotiated"] <- "longitude_negotiated_a"
-names(geo_code_decade_2)[names(geo_code_decade_2)=="latitude_location"] <- "latitude_location_a"
-names(geo_code_decade_2)[names(geo_code_decade_2)=="longitude_location"] <- "longitude_location_a"
-names(geo_code_decade_2)[names(geo_code_decade_2)=="grant_fishing"] <- "grant_fishing.x"
-names(geo_code_decade_2)[names(geo_code_decade_2)=="restrict_fishing"] <- "restrict_fishing.x"
-names(geo_code_decade_2)[names(geo_code_decade_2)=="restrict_alcohol"] <- "restrict_alcohol.x"
-names(geo_code_decade_2)[names(geo_code_decade_2)=="grant_hunting"] <- "grant_hunting.x"
-names(geo_code_decade_2)[names(geo_code_decade_2)=="restrict_hunting"] <- "restrict_hunting.x"
-names(geo_code_decade_2)[names(geo_code_decade_2)=="manypenny"] <- "manypenny.x"
+#names(geo_code_decade_2)[names(geo_code_decade_2)=="treaty_id"] <- "treaty_a"
+#names(geo_code_decade_2)[names(geo_code_decade_2)=="decade_full"] <- "borrowing_decade_char"
+#names(geo_code_decade_2)[names(geo_code_decade_2)=="nations"] <- "nations_a"
+#names(geo_code_decade_2)[names(geo_code_decade_2)=="nations_b"] <- "nations"
 
-geo_code_decade_2["nations_b"] <- NA
-geo_code_decade_2["us_agents_b"] <- NA
-geo_code_decade_2["latitude_negotiated_b"] <- NA
-geo_code_decade_2["longitude_negotiated_b"] <- NA
-geo_code_decade_2["latitude_location_b"] <- NA
-geo_code_decade_2["longitude_location_b"] <- NA
-geo_code_decade_2["grant_fishing.y"] <- NA
-geo_code_decade_2["restrict_fishing.y"] <- NA
-geo_code_decade_2["restrict_alcohol.y"] <- NA
-geo_code_decade_2["grant_hunting.y"] <- NA
-geo_code_decade_2["restrict_hunting.y"] <- NA
-geo_code_decade_2["manypenny.y"] <- NA
-geo_code_decade_2["borrowing_decade"] <- NA
-geo_code_decade_2["treaty_b"] <- NA
-geo_code_decade_2["n"] <- 0
-geo_code_decade_2["treaty_a_year"] <- NA
-geo_code_decade_2["treaty_b_year"] <- NA
-geo_code_decade_2["decade_full.x"] <- NA
-geo_code_decade_2["decade_full.y"] <- NA
-geo_code_decade_2["borrow_span"] <- 0
 
-map_data_2 <- rbind(map_data_2, geo_code_decade_2)
+#names(geo_code_decade_2)[names(geo_code_decade_2)=="us_agents"] <- "us_agents_a"
+#names(geo_code_decade_2)[names(geo_code_decade_2)=="latitude_negotiated"] <- "latitude_negotiated_a"
+#names(geo_code_decade_2)[names(geo_code_decade_2)=="longitude_negotiated"] <- "longitude_negotiated_a"
+#names(geo_code_decade_2)[names(geo_code_decade_2)=="latitude_location"] <- "latitude_location_a"
+#names(geo_code_decade_2)[names(geo_code_decade_2)=="longitude_location"] <- "longitude_location_a"
+#names(geo_code_decade_2)[names(geo_code_decade_2)=="grant_fishing"] <- "grant_fishing.x"
+#names(geo_code_decade_2)[names(geo_code_decade_2)=="restrict_fishing"] <- "restrict_fishing.x"
+#names(geo_code_decade_2)[names(geo_code_decade_2)=="restrict_alcohol"] <- "restrict_alcohol.x"
+#names(geo_code_decade_2)[names(geo_code_decade_2)=="grant_hunting"] <- "grant_hunting.x"
+#names(geo_code_decade_2)[names(geo_code_decade_2)=="restrict_hunting"] <- "restrict_hunting.x"
+#names(geo_code_decade_2)[names(geo_code_decade_2)=="manypenny"] <- "manypenny.x"
+
+#geo_code_decade_2["nations"] <- NA
+#geo_code_decade_2["us_agents_b"] <- NA
+#geo_code_decade_2["latitude_negotiated_b"] <- NA
+#geo_code_decade_2["longitude_negotiated_b"] <- NA
+#geo_code_decade_2["latitude_location_b"] <- NA
+#geo_code_decade_2["longitude_location_b"] <- NA
+#geo_code_decade_2["grant_fishing.y"] <- NA
+#geo_code_decade_2["restrict_fishing.y"] <- NA
+#geo_code_decade_2["restrict_alcohol.y"] <- NA
+#geo_code_decade_2["grant_hunting.y"] <- NA
+#geo_code_decade_2["restrict_hunting.y"] <- NA
+#geo_code_decade_2["manypenny.y"] <- NA
+#geo_code_decade_2["borrowing_decade"] <- NA
+#geo_code_decade_2["treaty_b"] <- NA
+#geo_code_decade_2["n"] <- 0
+#geo_code_decade_2["treaty_a_year"] <- NA
+#geo_code_decade_2["treaty_b_year"] <- NA
+#geo_code_decade_2["decade_full.x"] <- NA
+#geo_code_decade_2["decade_full.y"] <- NA
+#geo_code_decade_2["borrow_span"] <- 0
+
+#map_data_2 <- rbind(map_data_2, geo_code_decade_2)
+
+#saveRDS(map_data_2, "map_data_2.rds")
+
+#map_data_2 <- readRDS("map_data_2.rds")
 ```
 
 
 ```{r data_prep6, echo=FALSE, message=FALSE, warning = FALSE}
 #Create and check list of sinlge nodes
+
+map_data_2 <- readRDS("map_data_2.rds")
 
 treatybs <- map_data_2[, 2]
 
